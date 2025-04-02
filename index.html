@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+          content=".">
+    <meta name="keywords"
+          content="NormalCrafter: Learning Temporally Consistent Normals
+          from Video Diffusion Priors">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NormalCrafter</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="./static/css/twentytwenty.css">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <!-- <link rel="icon" href="./img/logo.png"> -->
+
+
+    <script src="./static/js/jquery-3.2.1.min.js"></script>
+    <script src="./static/js/jquery.event.move.js"></script>
+    <script src="./static/js/jquery.twentytwenty.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/fontawesome.all.min.js"></script>
+</head>
+
+
+
+
+<body>
+
+
+<section class="hero teaser ">
+    <div class="hero-body">
+        <div class="container is-max-desktop has-text-centered">
+            <div class="columns is-centered">
+                <div class="column has-text-centered ">
+                    <!-- <img src="img/logo.png" style="height:170px; margin-bottom: -10px;"></img> -->
+                    <br><br>
+                    <h1 class="title is-1 publication-title has-text-centered">
+                        NormalCrafter: Learning Temporally Consistent Normals from Video Diffusion Priors
+                    </h1>
+                    <h2 class="title publication-title is-4 has-text-grey"> Anonymous submission to ICCV 2025</h2>
+                    <h2 class="title publication-title is-4 has-text-grey"> ID: 1441</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+    $(window).on('load', function () {
+        bulmaCarousel.attach('#results-carousel-horizontal', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            loop: true,
+            autoplay: false,
+        });
+
+        bulmaCarousel.attach('#results-carousel-vertical', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            loop: true,
+            autoplay: false,
+        });
+
+    });
+</script>
+
+
+<br><br><br>
+
+
+<section class="hero teaser is-light is-small">
+    <div class="hero-body">
+        <div class="container" style="text-align: center; ">
+            <h2 class="title is-3">Comparison with Baselines on DAVIS dataset and Sora generated videos</h2>
+            <div id="cmp-gt-carousel-horizontal" class="carousel results-carousel">
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/comparison/breakdance.mp4" type="video/mp4">
+                </video>
+                <!-- <br><br> -->
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/comparison/butterfly.mp4" type="video/mp4">
+                </video>
+                <!-- <br><br> -->
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/comparison/bike-trial.mp4" type="video/mp4">
+                </video>
+                <!-- <br><br> -->
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/comparison/boat.mp4 " type="video/mp4">
+                </video>
+                <!-- <br><br> -->
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/comparison/dancing.mp4" type="video/mp4">
+                </video>
+                <!-- <br><br> -->
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/comparison/elephant.mp4" type="video/mp4">
+                </video>
+                <!-- <br><br> -->
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/comparison/hike.mp4" type="video/mp4">
+                </video>
+                <!-- <br><br> -->
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/comparison/inflatable.mp4" type="video/mp4">
+                </video>
+                <!-- <br><br> -->
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/comparison/basketball-game.mp4" type="video/mp4">
+                </video>
+                <!-- <br><br> -->
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/comparison/camel.mp4" type="video/mp4">
+                </video>
+                <!-- <br><br> -->
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/comparison/horsejump-stick.mp4" type="video/mp4">
+                </video>
+                <!-- <br><br> -->
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/comparison/breakdance-flare.mp4" type="video/mp4">
+                </video>
+                <!-- <br><br> -->
+                
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/comparison/dance-jump.mp4" type="video/mp4">
+                </video>
+                <!-- <br><br> -->
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/comparison/e-bike.mp4" type="video/mp4">
+                </video>
+                <!-- <br><br> -->
+
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/comparison/dance-twirl.mp4" type="video/mp4">
+                </video>
+                <!-- <br><br> -->
+
+                
+
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<script>
+    $(window).on('load', function () {
+        bulmaCarousel.attach('#cmp-gt-carousel-horizontal', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            loop: true,
+            autoplay: false,
+        });
+
+    });
+</script>
+
+
+<section class="hero teaser is-light is-small">
+    <div class="hero-body">
+        <div class="container" style="text-align: center; ">
+            <h2 class="title is-3">Ablation Comparison</h2>
+            <div id="cmp-gt-carousel-horizontal" class="carousel results-carousel">
+
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/ablation/seasnake.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/ablation/longboard.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/ablation/rhino.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/ablation/inflatable.mp4 " type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/ablation/tractor-sand.mp4" type="video/mp4">
+                </video>
+
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+
+
+<!-- <section class="hero teaser is-light is-small">
+    <div class="hero-body">
+
+        <div class="container" style="text-align: center; ">
+            <h2 class="title is-3">Comparison with Depth-Anything-V2 on open-world videos</h2>
+            <div id="comparison-carousel-horizontal" class="carousel results-carousel">
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="video/comparison/horsejump-high.mp4" type="video/mp4">
+                    </video>
+                    <div class="twentytwenty-container twentytwenty-container-bottom">
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/horsejump-high-da2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/horsejump-high-ours.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="video/comparison/camel.mp4" type="video/mp4">
+                    </video>
+                    <div class="twentytwenty-container twentytwenty-container-bottom">
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/camel-da2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/camel-ours.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="video/comparison/kite-walk.mp4" type="video/mp4">
+                    </video>
+                    <div class="twentytwenty-container twentytwenty-container-bottom">
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/kite-walk-da2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/kite-walk-ours.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="video/comparison/scooter-black.mp4" type="video/mp4">
+                    </video>
+                    <div class="twentytwenty-container twentytwenty-container-bottom">
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/scooter-black-da2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/scooter-black-ours.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="video/comparison/closeup-main_combined.mp4" type="video/mp4">
+                    </video>
+                    <div class="twentytwenty-container twentytwenty-container-bottom">
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/closeup-main_combined-da2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/closeup-main_combined-ours.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="video/comparison/5442785-hd_1920_1080_25fps_combined.mp4" type="video/mp4">
+                    </video>
+                    <div class="twentytwenty-container twentytwenty-container-bottom">
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/5442785-hd_1920_1080_25fps_combined-da2.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/5442785-hd_1920_1080_25fps_combined-ours.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="video/comparison/10714343-hd_3840_2160_30fps_combined.mp4" type="video/mp4">
+                    </video>
+                    <div class="twentytwenty-container twentytwenty-container-bottom">
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/10714343-hd_3840_2160_30fps_combined-da2.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/10714343-hd_3840_2160_30fps_combined-ours.mp4"
+                                        type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="video/comparison/longmao_02_combined.mp4" type="video/mp4">
+                    </video>
+                    <div class="twentytwenty-container twentytwenty-container-bottom">
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/longmao_02_combined-da2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/longmao_02_combined-ours.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="video/comparison/wukong2_combined.mp4" type="video/mp4">
+                    </video>
+                    <div class="twentytwenty-container twentytwenty-container-bottom">
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/wukong2_combined-da2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/wukong2_combined-ours.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="video/comparison/wukong_combined.mp4" type="video/mp4">
+                    </video>
+                    <div class="twentytwenty-container twentytwenty-container-bottom">
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/wukong_combined-da2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/wukong_combined-ours.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="twoitem">
+                    <img id="cmp1" width="100%" src="./img/img01.jpg"/>
+
+                    <div class="twentytwenty-container twentytwenty-container-bottom">
+                        <div class="cmpcontent">
+                            <img id="cmp1-da2" width="100%" src="./img/img01-da2.jpg"/>
+                        </div>
+                        <div class="cmpcontent">
+                            <img id="cmp1-ours" width="100%" src="./img/img01-ours.jpg"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="twoitem">
+                    <img id="cmp2" width="100%" src="./img/img02.jpg"/>
+
+                    <div class="twentytwenty-container twentytwenty-container-bottom">
+                        <div class="cmpcontent">
+                            <img id="cmp2-da2" width="100%" src="./img/img02-da2.jpg"/>
+                        </div>
+                        <div class="cmpcontent">
+                            <img id="cmp2-ours" width="100%" src="./img/img02-ours.jpg"/>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    $(window).on('load', function () {
+        bulmaCarousel.attach('#comparison-carousel-horizontal', {
+            slidesToScroll: 2,
+            slidesToShow: 2,
+            loop: true,
+            autoplay: false,
+        });
+
+        $(".twentytwenty-container-bottom").twentytwenty({
+            before_label: 'Depth-Anything-V2',
+            after_label: 'Ours',
+            default_offset_pct: 0.3,
+            no_overlay: false,
+            // move_slider_on_hover: true,
+        });
+
+    });
+</script>
+
+
+<script>
+    $(window).on('load', function () {
+        bulmaCarousel.attach('#nvs-carousel-horizontal', {
+            slidesToScroll: 2,
+            slidesToShow: 2,
+            loop: true,
+            autoplay: false,
+        });
+
+        $(".twentytwenty-container-nvs").twentytwenty({
+            before_label: 'Input view',
+            after_label: 'Novel view',
+            default_offset_pct: 0.3,
+            no_overlay: false,
+            // move_slider_on_hover: true,
+        });
+
+    });
+</script>
+
+
+<script>
+    $(window).on('load', function () {
+        bulmaCarousel.attach('#editting-carousel-horizontal', {
+            slidesToScroll: 2,
+            slidesToShow: 2,
+            loop: true,
+            autoplay: false,
+        });
+
+        $(".twentytwenty-container-editting").twentytwenty({
+            before_label: 'W/ Depth-Anything-V2',
+            after_label: 'W/ Ours',
+            default_offset_pct: 0.3,
+            no_overlay: false,
+            // move_slider_on_hover: true,
+        });
+
+    });
+</script> -->
+
+
+
+
+<footer class="footer">
+    <div class="hero-body">
+        <div class="columns is-two-fifths is-centered">
+            <div class="column is-8">
+                <div class="content">
+                    <p>
+                        Website template credit to <a
+                            href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, and is licensed under a <a
+                            rel="license"
+                            href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                        Commons Attribution-ShareAlike 4.0 International License</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
