@@ -33,27 +33,103 @@
     <script src="./static/js/fontawesome.all.min.js"></script>
 </head>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LKCDBW8851"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
 
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-LKCDBW8851');
+</script>
 
 
 <body>
+    <section class="hero teaser">
+        <div class="hero-body">
+            <div class="container is-max-desktop has-text-centered">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <!-- <img src="img/logo.png" style="height:170px; margin-bottom: -10px;"></img> -->
+                        <h1 class="title is-1 publication-title has-text-centered">
+                            NormalCrafter: Learning Temporally Consistent Normals from Video Diffusion Priors
+                        </h1>
+                        <!-- <h2 class="title publication-title is-4 has-text-grey"> Arxiv </h2> -->
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?user=_9fN3mEAAAAJ&hl=zh-CN">Yanrui Bin</a><sup>1</sup>
+                            </span>
 
-
-<section class="hero teaser ">
-    <div class="hero-body">
-        <div class="container is-max-desktop has-text-centered">
-            <div class="columns is-centered">
-                <div class="column has-text-centered ">
-                    <!-- <img src="img/logo.png" style="height:170px; margin-bottom: -10px;"></img> -->
-                    <br><br>
-                    <h1 class="title is-1 publication-title has-text-centered">
-                        NormalCrafter: Learning Temporally Consistent Normals from Video Diffusion Priors
-                    </h1>
+                            <span class="author-block">
+                                <a href="https://wbhu.github.io">Wenbo Hu</a><sup>2*</sup>
+                            </span>
+                            
+                            <span class="author-block">
+                                <a href="https://www.whyy.site/">Haoyuan Wang</a><sup>3</sup>
+                            </span>
+                            <span class="author-block">
+                                <a href="https://xinyachen21.github.io/">Xinyan Chen</a><sup>4</sup>
+                            </span>
+                            <span class="author-block">
+                                <a href="https://www.polyu.edu.hk/aae/people/academic-staff/dr-wang-bing/">Bing Wang</a><sup>1 &dagger;</sup>
+                            </span>
+                            <br>
+                            
+                        </div>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block"><sup>1</sup>Spatial Intelligence Group, The Hong Kong Polytechnic University</span>
+                            <span class="author-block"><sup>2</sup>Tencent AI Lab</span>
+                            <span class="author-block"><sup>3</sup>City University of Hong Kong</span>
+                            <span class="author-block"><sup>4</sup>Huazhong University of Science and Technology</span>
+                        </div>
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <span class="link-block">
+                                    <!-- Paper Link. -->
+                                    <a href="https://arxiv.org/abs/123"
+                                       class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="ai ai-arxiv"></i>
+                                        </span>
+                                        <span>arXiv</span>
+                                    </a>
+                                    <!-- Code Link. -->
+                                    <a href="https://github.com/Binyr/NormalCrafter"
+                                       class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a>
+                                    <!-- HF Link. -->
+                                    <a href="https://huggingface.co/spaces/123" target="_blank"
+                                       rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            &#129303;
+                                        </span>
+                                        <span>Hugging Face Demo</span>
+                                    </a>
+                                    <!-- Model Link. -->
+                                    <a href="https://huggingface.co/Yanrui95/NormalCrafter" target="_blank"
+                                       rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                           <i class="fas fa-dumbbell"></i>
+                                        </span>
+                                        <span>Model</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
 
 
 
@@ -76,14 +152,58 @@
     });
 </script>
 
-
 <br><br><br>
+
+<section class="hero teaser">
+    <div class="hero-body">
+        <!-- Method. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-three-fifths" style=" margin-top: 30px; margin-bottom: 20px;">
+                    <h2 class="title is-3">Brief introduction</h2>
+                    <div class="content has-text-justified">
+
+                        <b>Abstract.</b>
+                        Surface normal estimation serves as a cornerstone for a spectrum of computer vision applications.
+                        While numerous efforts have been devoted to static image scenarios, ensuring temporal coherence 
+                        in video-based normal estimation remains a formidable challenge.
+                        Instead of merely augmenting existing methods with temporal components, we present NormalCrafter 
+                        to leverage the inherent temporal priors of video diffusion models.
+                        To secure high-fidelity normal estimation across sequences, we propose 
+                        Semantic Feature Regularization (SFR), which aligns diffusion features with semantic cues, 
+                        encouraging the model to concentrate on the intrinsic semantics of the scene.
+                        Moreover, we introduce a two-stage training protocol that leverages both latent and pixel space 
+                        learning to preserve spatial accuracy while maintaining long temporal context.
+                        Extensive evaluations demonstrate the efficacy of our method, showcasing a superior performance 
+                        in generating temporally consistent normal sequences with intricate details from diverse videos.
+
+                        <div class="hero-body" style="margin-top: 40px; margin-bottom: -30px;">
+                            <img id="overview" width="90%" src="img/pipeline.png"/>
+                        </div>
+                        <b>Overview.</b>
+                        We model the video normal estimation task with a video diffusion model conditioned on input
+                        RGB frames.
+                        We propose Semantic Feature Regularization (SFR) L<sub>reg</sub> to align the diffusion features with robust 
+                        semantic representations from DINO encoder, encouraging the model to concentrate on the 
+                        intrinsic semantics for accurate and detailed normal estimation.
+                        Our training protocol consists of two stages: 1. training the entire U-Net in the latent space 
+                        with diffusion score matching L<sub>DSM</sub> and SFR L<sub>reg</sub>; 2. fine-tuning only the spatial layers in pixel 
+                        space with angular loss L<sub>angular</sub> and SFR L<sub>reg</sub>.
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--/ Method. -->
+    </div>
+</section>
 
 
 <section class="hero teaser is-light is-small">
     <div class="hero-body">
         <div class="container" style="text-align: center; ">
-            <h2 class="title is-3">Comparison with Baselines on DAVIS dataset and Sora generated videos</h2>
+            <h2 class="title is-3">Comparison with Baselines on DAVIS dataset</h2>
             <div id="cmp-gt-carousel-horizontal" class="carousel results-carousel">
 
                 <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
@@ -187,28 +307,64 @@
 <section class="hero teaser is-light is-small">
     <div class="hero-body">
         <div class="container" style="text-align: center; ">
-            <h2 class="title is-3">Ablation Comparison</h2>
+            <h2 class="title is-3">Comparison with Baselines on Sora videos</h2>
             <div id="cmp-gt-carousel-horizontal" class="carousel results-carousel">
 
 
                 <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-                    <source src="./video/ablation/seasnake.mp4" type="video/mp4">
+                    <source src="video/sora/robot_video_game.mp4" type="video/mp4">
                 </video>
 
                 <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-                    <source src="./video/ablation/longboard.mp4" type="video/mp4">
+                    <source src="video/sora/Tokyo_Walk.mp4" type="video/mp4">
                 </video>
 
                 <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-                    <source src="./video/ablation/rhino.mp4" type="video/mp4">
+                    <source src="video/sora/cat_on_bed.mp4" type="video/mp4">
                 </video>
 
                 <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-                    <source src="./video/ablation/inflatable.mp4 " type="video/mp4">
+                    <source src="video/sora/aquariumnyc.mp4" type="video/mp4">
                 </video>
 
                 <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-                    <source src="./video/ablation/tractor-sand.mp4" type="video/mp4">
+                    <source src="video/sora/BigSur.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="video/sora/birdsoverriver.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="video/sora/chairarchaeology.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="video/sora/eat_burger.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="video/sora/example_05.mp4.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="video/sora/flowerblooming.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="video/sora/grandmabirthday.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="video/sora/lagos.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="video/sora/ShipsinCoffee.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="video/sora/SUVintheDust.mp4" type="video/mp4">
                 </video>
 
             </div>
