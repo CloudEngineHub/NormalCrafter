@@ -72,7 +72,7 @@
                                 <a href="https://www.whyy.site/">Haoyuan Wang</a><sup>3</sup>
                             </span>
                             <span class="author-block">
-                                <a href="https://xinyachen21.github.io/">Xinyan Chen</a><sup>4</sup>
+                                <a href="https://xinyachen21.github.io/">Xinya Chen</a><sup>4</sup>
                             </span>
                             <span class="author-block">
                                 <a href="https://www.polyu.edu.hk/aae/people/academic-staff/dr-wang-bing/">Bing Wang</a><sup>1 &dagger;</sup>
@@ -106,7 +106,7 @@
                                         <span>Code</span>
                                     </a>
                                     <!-- HF Link. -->
-                                    <a href="https://huggingface.co/spaces/123" target="_blank"
+                                    <a href="https://huggingface.co/spaces/Yanrui95/NormalCrafter" target="_blank"
                                        rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
                                             &#129303;
@@ -199,6 +199,87 @@
     </div>
 </section>
 
+<section class="hero teaser is-light is-small">
+    <div class="hero-body">
+        <div class="container" style="text-align: center; ">
+            <h2 class="title is-3">Comparison with Baselines on Sora videos</h2>
+            <div id="cmp-gt-carousel-horizontal" class="carousel results-carousel">
+
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="video/sora/robot_video_game.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="video/sora/Tokyo_Walk.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="video/sora/cat_on_bed.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="video/sora/aquariumnyc.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="video/sora/BigSur.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="video/sora/birdsoverriver.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="video/sora/chairarchaeology.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="video/sora/eat_burger.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="video/sora/example_05.mp4.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="video/sora/flowerblooming.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="video/sora/grandmabirthday.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="video/sora/lagos.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="video/sora/ShipsinCoffee.mp4" type="video/mp4">
+                </video>
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="video/sora/SUVintheDust.mp4" type="video/mp4">
+                </video>
+
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<script>
+    $(window).on('load', function () {
+        bulmaCarousel.attach('#cmp-gt-carousel-horizontal', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            loop: true,
+            autoplay: false,
+        });
+
+    });
+</script>
 
 <section class="hero teaser is-light is-small">
     <div class="hero-body">
@@ -283,89 +364,6 @@
                 <!-- <br><br> -->
 
                 
-
-            </div>
-
-
-        </div>
-    </div>
-</section>
-
-<script>
-    $(window).on('load', function () {
-        bulmaCarousel.attach('#cmp-gt-carousel-horizontal', {
-            slidesToScroll: 1,
-            slidesToShow: 1,
-            loop: true,
-            autoplay: false,
-        });
-
-    });
-</script>
-
-
-<section class="hero teaser is-light is-small">
-    <div class="hero-body">
-        <div class="container" style="text-align: center; ">
-            <h2 class="title is-3">Comparison with Baselines on Sora videos</h2>
-            <div id="cmp-gt-carousel-horizontal" class="carousel results-carousel">
-
-
-                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-                    <source src="video/sora/robot_video_game.mp4" type="video/mp4">
-                </video>
-
-                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-                    <source src="video/sora/Tokyo_Walk.mp4" type="video/mp4">
-                </video>
-
-                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-                    <source src="video/sora/cat_on_bed.mp4" type="video/mp4">
-                </video>
-
-                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-                    <source src="video/sora/aquariumnyc.mp4" type="video/mp4">
-                </video>
-
-                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-                    <source src="video/sora/BigSur.mp4" type="video/mp4">
-                </video>
-
-                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-                    <source src="video/sora/birdsoverriver.mp4" type="video/mp4">
-                </video>
-
-                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-                    <source src="video/sora/chairarchaeology.mp4" type="video/mp4">
-                </video>
-
-                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-                    <source src="video/sora/eat_burger.mp4" type="video/mp4">
-                </video>
-
-                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-                    <source src="video/sora/example_05.mp4.mp4" type="video/mp4">
-                </video>
-
-                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-                    <source src="video/sora/flowerblooming.mp4" type="video/mp4">
-                </video>
-
-                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-                    <source src="video/sora/grandmabirthday.mp4" type="video/mp4">
-                </video>
-
-                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-                    <source src="video/sora/lagos.mp4" type="video/mp4">
-                </video>
-
-                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-                    <source src="video/sora/ShipsinCoffee.mp4" type="video/mp4">
-                </video>
-
-                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-                    <source src="video/sora/SUVintheDust.mp4" type="video/mp4">
-                </video>
 
             </div>
 
