@@ -1,14 +1,25 @@
 ## ___***NormalCrafter: Learning Temporally Consistent Video Normal from Video Diffusion Priors***___
+<div align="center">
+<br>
 
-_**[Yanrui Bin<sup>1</sup>](https://scholar.google.com/citations?user=_9fN3mEAAAAJ&hl=zh-CN),[Wenbo Hu<sup>2*](https://wbhu.github.io), 
+_**[Yanrui Bin<sup>1</sup>](https://binyr.github.io/),[Wenbo Hu<sup>2*](https://wbhu.github.io), 
 [Haoyuan Wang<sup>3](https://www.whyy.site/), 
 [Xinya Chen<sup>4](https://xinyachen21.github.io/), 
 [Bing Wang<sup>2 &dagger;</sup>](https://bingcs.github.io/)**_
-<br><br>
+<br>
 <sup>1</sup>Spatial Intelligence Group, The Hong Kong Polytechnic University
 <sup>2</sup>ARC Lab, Tencent PCG
 <sup>3</sup>City University of Hong Kong
 <sup>4</sup>Huazhong University of Science and Technology
+<!-- </div> -->
+
+ICCV 2025
+
+![Version](https://img.shields.io/badge/version-1.0.0-blue) &nbsp;
+ <a href='https://arxiv.org/abs/2504.11427'><img src='https://img.shields.io/badge/arXiv-2504.01016-b31b1b.svg'></a> &nbsp;
+ <a href='https://normalcrafter.github.io/'><img src='https://img.shields.io/badge/Project-Page-Green'></a> &nbsp;
+ <a href='https://huggingface.co/spaces/Yanrui95/NormalCrafter'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Demo-blue'></a> &nbsp;
+
 </div>
 
 ## 🔆 Notice
